@@ -24,6 +24,9 @@ salidas) están en [`documentation/ficha.md`](documentation/ficha.md).
 resultados y escribe tablas y figuras en `outputs/`. También copia las
 figuras numeradas a `article/images/`.
 
+Los repositorios anteriores a 2026 que todavía no tienen `MASTER.R` explican
+cómo replicar en `documentation/ficha.md`.
+
 Para ver el artículo, abre `article/index.Rmd` en RStudio y usa Knit. La
 versión publicada se genera desde el repositorio del sitio con `blogdown`.
 
