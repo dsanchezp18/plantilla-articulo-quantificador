@@ -1,0 +1,18 @@
+# RStudio y R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+Rplots.pdf
+
+# Datos: se regeneran con MASTER.R y se documentan en documentation/
+data/raw/*
+data/intermediate/*
+data/final/*
+!data/raw/README.md
+!data/intermediate/README.md
+!data/final/README.md
+
+# Renders del artículo: se regeneran desde article/index.Rmd
+article/index.html
+article/*_files/

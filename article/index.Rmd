@@ -1,0 +1,78 @@
+---
+title: "[COMPLETAR: título del autor, sin cambios por SEO]"
+date: '[COMPLETAR: AAAA-MM-DD]'
+slug: [COMPLETAR: AAAA-MM-DD-palabras-clave]
+authors:
+  - '[COMPLETAR: slug de content/los-quantificadores, por ejemplo daniel-sanchez]'
+categories:
+  - [COMPLETAR: Economía, Política, Salud, Educación o Valores y comportamiento]
+tags:
+  - [COMPLETAR: reusa etiquetas existentes, de 1 a 4]
+description: '[COMPLETAR: una o dos oraciones que resumen el hallazgo]'
+thumbnail: 'post/[COMPLETAR: categoria]/[COMPLETAR: slug]/thumbnail.png'
+images:
+  - 'post/[COMPLETAR: categoria]/[COMPLETAR: slug]/thumbnail.png'
+image_alt: '[COMPLETAR: qué muestra la portada]'
+edition: '[COMPLETAR: Julio-Diciembre 2026]'
+repository_url: 'https://github.com/elquantificador/[COMPLETAR: repo]'
+bibliography: references.bib
+csl: ../../citation-es.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, out.width = "100%")
+
+library(dplyr)
+library(readr)
+
+tables_path <- "../outputs/tables"
+
+# Las cifras exactas del texto se leen de las tablas del pipeline; las
+# proporciones redondeadas escritas a mano se verifican contra ellas.
+
+summary_table <- read_csv(
+  file.path(tables_path, "tema.csv"),
+  show_col_types = FALSE
+)
+
+format_number <- function(x, digits = 0) {
+  format(
+    round(x, digits),
+    big.mark = ".",
+    decimal.mark = ",",
+    nsmall = digits,
+    trim = TRUE
+  )
+}
+```
+
+*En esta entrega del Quantificador, [COMPLETAR: autor] analiza [COMPLETAR: pregunta, fuente y periodo]. [COMPLETAR: hallazgo principal en una oración.]*
+
+[COMPLETAR: párrafo de contexto. Por qué importa la pregunta y qué datos existen.]
+
+[COMPLETAR: párrafo que presenta la fuente, el periodo y lo que vas a mostrar.]
+
+# [COMPLETAR: encabezado que enuncia el primer hallazgo]
+
+[COMPLETAR: texto con cifras en línea, por ejemplo `r format_number(sum(summary_table$total, na.rm = FALSE))`.]
+
+*Gráfico 1: [COMPLETAR: título del gráfico]*
+
+![Gráfico 1: [COMPLETAR: título del gráfico]](images/grafico1.png)
+
+*Fuente: [COMPLETAR]. Nota: [COMPLETAR].*
+
+[COMPLETAR: lectura del gráfico.]
+
+# [COMPLETAR: encabezado del segundo hallazgo]
+
+[COMPLETAR]
+
+# [COMPLETAR: encabezado de cierre]
+
+[COMPLETAR: qué muestran los datos, qué no permiten afirmar y qué falta medir.]
+
+# Referencias
+
+::: {#refs}
+:::
