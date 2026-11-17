@@ -21,13 +21,15 @@ para cerrar el artículo.]
 
 ## Pregunta y alcance
 
-[COMPLETAR: dos o tres oraciones con la pregunta, el periodo, la cobertura
-geográfica y la unidad de análisis.]
+[COMPLETAR: pregunta, periodo, cobertura geográfica, unidad de análisis,
+método, supuestos y principales limitaciones.]
 
 ## Requisitos
 
 - R [COMPLETAR: versión, por ejemplo 4.5.x].
-- Paquetes de R: [COMPLETAR: lista en orden alfabético].
+- Paquetes de R y versiones necesarias: [COMPLETAR: lista en orden alfabético,
+  incluidos los paquetes para renderizar el artículo].
+- Otros programas o pasos manuales: [COMPLETAR o indicar que no se requieren].
 
 ## Fuentes de datos
 
