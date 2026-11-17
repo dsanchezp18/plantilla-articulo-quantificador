@@ -3,8 +3,7 @@
 Este repositorio reúne los datos, el código y el artículo de una publicación
 de [El Quantificador](https://elquantificador.org/), el blog de análisis
 cuantitativo del Laboratorio de Investigación para el Desarrollo del Ecuador
-(LIDE). Todos los repositorios de artículos de El Quantificador tienen este
-mismo README y esta misma estructura de carpetas.
+(LIDE). Esta plantilla propone una estructura común que se adapta a cada artículo.
 
 Los datos propios de cada artículo (título, autoría, fuentes, estado y
 salidas) están en [`documentation/ficha.md`](documentation/ficha.md).
@@ -22,10 +21,12 @@ salidas) están en [`documentation/ficha.md`](documentation/ficha.md).
 
 `MASTER.R` descarga los insumos a `data/raw/`, los limpia, calcula los
 resultados y escribe tablas y figuras en `outputs/`. También copia las
-figuras numeradas a `article/images/`.
+figuras numeradas a `article/images/` y las tablas usadas en el texto a
+`article/tables/`.
 
-Los repositorios anteriores a 2026 que todavía no tienen `MASTER.R` explican
-cómo replicar en `documentation/ficha.md`.
+Adapta los scripts y `MASTER.R` a las fuentes y al análisis del artículo.
+La plantilla contiene ejemplos con campos por completar; no es un análisis listo
+para ejecutar. Documenta en la ficha los pasos manuales y las excepciones.
 
 Para ver el artículo, abre `article/index.Rmd` en RStudio y usa Knit. La
 versión publicada se genera desde el repositorio del sitio con `blogdown`.
@@ -59,7 +60,7 @@ outputs/tables/        Tablas generadas por el código
 
 Las fuentes de cada artículo están en `documentation/fuentes.csv`, con su
 enlace oficial. Los datos crudos no se versionan: el script de descarga los
-vuelve a obtener. Los datos de terceros conservan los términos de su fuente
+vuelve a obtener cuando es posible; documenta las descargas manuales en la ficha. Los datos de terceros conservan los términos de su fuente
 (ver `DATA-NOTICE.md`).
 
 ## Publicación en el sitio
@@ -67,7 +68,10 @@ vuelve a obtener. Los datos de terceros conservan los términos de su fuente
 Copia el contenido de `article/` a `content/post/[categoria]/[slug]/` en el
 repositorio del sitio. Revisa que `authors` coincida con un archivo de
 `content/los-quantificadores/` y que `repository_url` apunte a este
-repositorio.
+repositorio. Incluye `article/tables/` y `citation-es.csl` para que los
+valores en línea y las referencias se puedan renderizar en el sitio. Revisa
+que las tablas copiadas no contengan datos personales y que la fuente permita
+su publicación.
 
 Si un gráfico del artículo se publica también en redes o en Visualizaciones,
 se rehace en `graficos-el-quantificador` a partir de una tabla de
@@ -77,6 +81,8 @@ se rehace en `graficos-el-quantificador` a partir de una tabla de
 
 - **Código:** [MIT](LICENSE).
 - **Texto, figuras y tablas:** [CC BY-NC 4.0](LICENSE-content).
+- **Estilo de citas `article/citation-es.csl`:** CC BY-SA 3.0; sus créditos
+  y licencia están en el archivo.
 - **Datos de terceros:** conservan los términos de su fuente
   ([aviso](DATA-NOTICE.md)).
 - **Nombre y logotipos:** todos los derechos reservados.
