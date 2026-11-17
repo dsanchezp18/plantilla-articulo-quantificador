@@ -55,14 +55,13 @@ if (nrow(missing_files) > 0) {
 
 # 4. Extract archives ----
 
-# Se conserva solo lo extraído; el ZIP se borra para no duplicar datos. Si la
-# fuente no viene comprimida, borra este paso y library(stringr).
+# Se conserva el ZIP original para evitar volver a descargarlo. Si la fuente
+# no viene comprimida, borra este paso y library(stringr).
 
 zip_files <- sources |>
   filter(str_ends(downloaded_file, ".zip")) |>
   pull(downloaded_file)
 
 walk(zip_files, \(zip_file) unzip(zip_file, exdir = raw_path))
-walk(zip_files, file.remove)
 
 message("Descarga completa en ", raw_path)
