@@ -11,9 +11,10 @@ Los datos crudos no se versionan en este repositorio: `data/raw/` se llena con
 sociales y cualquier contenido de terceros con derechos propios tampoco se
 publican.
 
-Lo que Laboratorio de Investigación para el Desarrollo del Ecuador sí produce, como las tablas derivadas de
-`outputs/tables/` y las figuras, se distribuye bajo CC BY-NC 4.0 según
-`LICENSE-content`.
+Las tablas y figuras elaboradas por LIDE se distribuyen bajo CC BY-NC 4.0
+según `LICENSE-content`, siempre que los términos de las fuentes lo permitan.
+Antes de publicar una salida, revisa esos términos y comprueba que no revele
+datos personales ni información restringida.
 
 Si eres titular de alguno de estos datos y quieres que lo retiremos, escríbenos
 a elquantificador@laboratoriolide.org.
