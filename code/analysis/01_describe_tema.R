@@ -26,6 +26,7 @@ images_path <- "article/images"
 dir.create(tables_path, recursive = TRUE, showWarnings = FALSE)
 dir.create(graphs_path, recursive = TRUE, showWarnings = FALSE)
 dir.create(images_path, recursive = TRUE, showWarnings = FALSE)
+dir.create("article/tables", recursive = TRUE, showWarnings = FALSE)
 
 # El artículo numera las figuras según el orden del texto; este vector
 # mapea cada figura del análisis a su nombre en article/images.
@@ -81,6 +82,7 @@ figure_tema_logo <- add_logo(figure_tema)
 # 5. Write outputs ----
 
 write_csv(summary_table, file.path(tables_path, "tema.csv"))
+write_csv(summary_table, "article/tables/tema.csv")
 
 ggsave(
   file.path(graphs_path, "tema.png"),
